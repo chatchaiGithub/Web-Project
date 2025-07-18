@@ -72,17 +72,17 @@ travler-web/
 ## Development Team
 
 ### Project Lead & Developer
-- **Name:** Somchai Jaidee
+- **Name:** Chatchai Khunwandee
 - **Role:** Lead Developer
 - **Contact:** somchai.j@travelrider.com
 
 ### Design & UI/UX
-- **Name:** Pranee Sooksai
+- **Name:** Chaiphong Baipho
 - **Role:** UI/UX Designer
 - **Contact:** pranee.s@travelrider.com
 
 ### Technical Implementation
-- **Name:** Thana Sittipong
+- **Name:** Phattrawut Nachairit
 - **Role:** Frontend Developer
 - **Contact:** thana.s@travelrider.com
 
