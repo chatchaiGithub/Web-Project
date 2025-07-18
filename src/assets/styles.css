@@ -1,0 +1,329 @@
+/* Global styles for TravelRider */
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f8ff;
+}
+
+/* Navbar styles */
+.top-navbar-button:hover {
+  background-color: rgba(24, 144, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.top-navbar-items a {
+  text-decoration: none;
+}
+
+.main-navbar .ant-menu-item {
+  position: relative;
+  margin: 0 8px;
+  height: 60px;
+  line-height: 60px;
+  transition: all 0.3s ease;
+  color: white !important;
+}
+
+.main-navbar .ant-menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.main-navbar .ant-menu-item::after {
+  position: absolute !important;
+  content: '' !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  width: 0 !important;
+  height: 3px !important;
+  background: white !important;
+  transition: all 0.3s ease !important;
+  transform: translateX(-50%) !important;
+  border-bottom: none !important;
+}
+
+.main-navbar .ant-menu-item-selected {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+.main-navbar .ant-menu-item-selected::after {
+  width: 80% !important;
+}
+
+.logo-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(24, 144, 255, 0.3);
+}
+
+/* Custom notification styles */
+.ant-notification-notice {
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ant-notification-notice-message {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Windows 11 style notification */
+.windows11-notification {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Reviews component styles */
+.custom-carousel-dots li button {
+  background: #1890ff !important;
+  opacity: 0.3;
+}
+
+.custom-carousel-dots li.slick-active button {
+  opacity: 1;
+  width: 16px;
+}
+
+/* Responsive utilities */
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: block;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+  
+  .desktop-only {
+    display: none;
+  }
+  
+  .top-navbar {
+    padding: 8px 16px !important;
+  }
+  
+  .main-navbar .ant-menu-item {
+    margin: 0 4px;
+  }
+  
+  /* Improve mobile responsiveness */
+  .logo-container {
+    transform: scale(0.85);
+    margin-right: -10px;
+  }
+  
+  .top-navbar-button {
+    padding: 4px 8px !important;
+    font-size: 12px !important;
+  }
+  
+  .top-navbar-button span {
+    display: none;
+  }
+  
+  .main-navbar .ant-menu {
+    padding: 0 16px !important;
+  }
+  
+  .main-navbar .ant-menu-item {
+    font-size: 14px;
+  }
+  
+  .main-navbar .ant-menu-item .badge {
+    display: none;
+  }
+}
+
+/* Better hover effects for buttons */
+.ant-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+}
+
+.ant-btn-primary {
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+}
+
+.ant-btn-primary:hover {
+  background: linear-gradient(135deg, #40a9ff 0%, #1890ff 100%);
+}
+
+/* Flight card hover effect */
+.ant-card-hoverable {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.ant-card-hoverable:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Custom styling for flight listings */
+.flight-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+}
+
+.flight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom styling for price tags */
+.price-tag {
+  color: #1890ff;
+  font-weight: bold;
+  font-size: 28px;
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Add this section after the main-navbar .ant-menu-item-selected styles */
+.main-navbar .ant-menu-item a {
+  color: white !important;
+}
+
+.main-navbar .ant-menu-item-selected a {
+  color: white !important;
+}
+
+/* Fix for Ant Design menu overrides */
+.ant-menu-light .ant-menu-item-selected {
+  color: inherit;
+}
+
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item-selected::after,
+.ant-menu-light.ant-menu-horizontal > .ant-menu-submenu-selected::after {
+  display: none;
+}
+
+/* Make form inputs more prominent on focus */
+.ant-input:focus, 
+.ant-input-focused,
+.ant-select-focused .ant-select-selector {
+  border-color: #1890ff !important;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2) !important;
+}
+
+.ant-input, .ant-select-selector, .ant-picker {
+  border-radius: 8px !important;
+  transition: all 0.3s ease;
+}
+
+.ant-input:hover, .ant-select-selector:hover, .ant-picker:hover {
+  border-color: #40a9ff !important;
+}
+
+/* Card styling */
+.ant-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Badge styling */
+.ant-badge-count {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer link hover effects */
+footer a:hover {
+  color: #1890ff !important;
+  text-decoration: underline;
+}
+
+/* BackTop button animation */
+.ant-back-top {
+  transition: all 0.3s ease;
+}
+
+.ant-back-top:hover {
+  transform: translateY(-5px);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 992px) {
+  .top-navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .top-navbar > div:first-child {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ant-card {
+    margin-bottom: 16px;
+  }
+  
+  .ant-form-item {
+    margin-bottom: 16px;
+  }
+  
+  .top-navbar-items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .main-navbar .ant-menu-item {
+    margin: 0 4px;
+    padding: 0 10px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-container {
+    padding: 6px 12px;
+  }
+  
+  .main-navbar .ant-menu-item {
+    padding: 0 8px !important;
+  }
+}

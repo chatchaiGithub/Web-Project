@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>Page Not Found | TravelRider</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .container {
+      max-width: 800px;
+      text-align: center;
+      background-color: white;
+      border-radius: 12px;
+      padding: 3rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      margin: 2rem;
+    }
+    
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, #1890ff, #69c0ff);
+    }
+    
+    .error-code {
+      font-size: 8rem;
+      font-weight: 700;
+      color: #1890ff;
+      line-height: 1;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 0px rgba(24, 144, 255, 0.2);
+      opacity: 0.9;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+    
+    p {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: #1890ff;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 12px 32px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 4px 15px rgba(24, 144, 255, 0.3);
+    }
+    
+    .btn:hover {
+      background: #0c75d6;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(24, 144, 255, 0.4);
+    }
+    
+    .btn:active {
+      transform: translateY(0);
+    }
+    
+    .illustration {
+      max-width: 350px;
+      margin: 0 auto 2rem;
+    }
+    
+    .airplane {
+      width: 100px;
+      position: absolute;
+      top: 20%;
+      left: -100px;
+      animation: fly 15s linear infinite;
+    }
+    
+    @keyframes fly {
+      from {
+        left: -100px;
+        transform: translateY(0);
+      }
+      25% {
+        transform: translateY(-20px);
+      }
+      50% {
+        transform: translateY(0);
+      }
+      75% {
+        transform: translateY(20px);
+      }
+      to {
+        left: calc(100% + 100px);
+        transform: translateY(0);
+      }
+    }
+    
+    .clouds {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    
+    .cloud {
+      position: absolute;
+      background: white;
+      border-radius: 100px;
+      opacity: 0.8;
+    }
+    
+    .cloud-1 {
+      width: 100px;
+      height: 30px;
+      top: 20%;
+      left: 10%;
+      animation: cloud-move 35s linear infinite;
+    }
+    
+    .cloud-2 {
+      width: 150px;
+      height: 40px;
+      top: 50%;
+      left: 70%;
+      animation: cloud-move 45s linear infinite;
+    }
+    
+    .cloud-3 {
+      width: 80px;
+      height: 25px;
+      top: 70%;
+      left: 30%;
+      animation: cloud-move 30s linear infinite reverse;
+    }
+    
+    @keyframes cloud-move {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(calc(100vw + 200px));
+      }
+    }
+    
+    .suggestions {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .suggestions h3 {
+      margin-bottom: 1rem;
+      color: #555;
+    }
+    
+    .suggestion-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .suggestion-list li a {
+      color: #1890ff;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      background: rgba(24, 144, 255, 0.1);
+      transition: all 0.2s ease;
+    }
+    
+    .suggestion-list li a:hover {
+      background: rgba(24, 144, 255, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    .logo {
+      margin-bottom: 2rem;
+      display: inline-block;
+    }
+    
+    .logo img {
+      height: 40px;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 2rem;
+        margin: 1rem;
+      }
+      
+      .error-code {
+        font-size: 5rem;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="clouds">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+  </div>
+  
+  <svg class="airplane" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1890ff">
+    <path d="M22,16.5L16.5,8L12,4.5L7.5,8L2,16.5H8L12,13L16,16.5H22M10.5,9.5L12,8.5L13.5,9.5L12,6.5L10.5,9.5Z" />
+  </svg>
+  
+  <div class="container">
+    <a href="/" class="logo">
+      <svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10,10 H170 A10,10 0 0 1 180,20 V30 A10,10 0 0 1 170,40 H10 A10,10 0 0 1 0,30 V20 A10,10 0 0 1 10,10 Z" fill="#1890ff"/>
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Poppins" font-weight="600" font-size="18">TravelRider</text>
+      </svg>
+    </a>
+    
+    <div class="error-code">404</div>
+    
+    <h1>Oops! Page Not Found</h1>
+    
+    <p>We couldn't find the page you were looking for. It might have been removed, renamed, or is temporarily unavailable.</p>
+    
+    <a href="/" class="btn">Back to Homepage</a>
+    
+    <div class="suggestions">
+      <h3>You might be looking for:</h3>
+      <ul class="suggestion-list">
+        <li><a href="/flights">Flights</a></li>
+        <li><a href="/hotels">Hotels</a></li>
+        <li><a href="/destinations">Destinations</a></li>
+        <li><a href="/promotions">Promotions</a></li>
+        <li><a href="/support">Support</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <script>
+    // Generate random clouds
+    function createRandomClouds() {
+      const cloudContainer = document.querySelector('.clouds');
+      const numberOfClouds = Math.floor(Math.random() * 3) + 3;
+      
+      for (let i = 0; i < numberOfClouds; i++) {
+        const cloud = document.createElement('div');
+        cloud.classList.add('cloud');
+        
+        const width = Math.floor(Math.random() * 100) + 50;
+        const height = width * 0.3;
+        const top = Math.floor(Math.random() * 80) + 10;
+        const left = Math.floor(Math.random() * 80) + 10;
+        const delay = Math.floor(Math.random() * 20);
+        const duration = Math.floor(Math.random() * 30) + 30;
+        
+        cloud.style.width = `${width}px`;
+        cloud.style.height = `${height}px`;
+        cloud.style.top = `${top}%`;
+        cloud.style.left = `${left}%`;
+        cloud.style.animationDelay = `${delay}s`;
+        cloud.style.animationDuration = `${duration}s`;
+        
+        cloudContainer.appendChild(cloud);
+      }
+    }
+    
+    // Call the function when the page loads
+    window.addEventListener('load', createRandomClouds);
+  </script>
+</body>
+</html>
