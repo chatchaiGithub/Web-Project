@@ -74,17 +74,17 @@ travler-web/
 ### Project Lead & Developer
 - **Name:** Chatchai Khunwandee
 - **Role:** Lead Developer
-- **Contact:** somchai.j@travelrider.com
+- **Contact:** chatchai.k@travelrider.com
 
 ### Design & UI/UX
 - **Name:** Chaiphong Baipho
 - **Role:** UI/UX Designer
-- **Contact:** pranee.s@travelrider.com
+- **Contact:** chatphong.b@travelrider.com
 
 ### Technical Implementation
 - **Name:** Phattrawut Nachairit
 - **Role:** Frontend Developer
-- **Contact:** thana.s@travelrider.com
+- **Contact:** phattrawut.n@travelrider.com
 
 ## Getting Started
 
