@@ -79,7 +79,7 @@ travler-web/
 ### Design & UI/UX
 - **Name:** Chaiphong Baipho
 - **Role:** UI/UX Designer
-- **Contact:** chatphong.b@travelrider.com
+- **Contact:** chaiphong.b@travelrider.com
 
 ### Technical Implementation
 - **Name:** Phattrawut Nachairit
